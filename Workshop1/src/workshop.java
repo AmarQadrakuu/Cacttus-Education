@@ -81,3 +81,29 @@ void main() {
 
     }
 }
+        case 4 -> {
+
+            String user = IO.readln("Username: ");
+            String password = IO.readln("Fjalëkalimi bosh (vetëm Enter): ");
+
+            if (password.isEmpty()) {
+
+                IO.println("Fjalëkalimi s'mund të jetë bosh.");
+
+            } else if (user.trim().equals("operator") && password.equals("Op3r!2026")) {
+
+                level = +2;
+
+                System.out.printf("Hyrje e suksesshme ne Operator!\n Hapesira juaj %s GB", (level * 2.5));
+
+            } else {
+
+                IO.println("Gabim username ose password");
+
+            }
+        }
+
+        default -> IO.println("Zgjedhje e Gabuar");
+
+    }
+}
